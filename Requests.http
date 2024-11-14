@@ -1,0 +1,5 @@
+#GET getGamesByID
+GET http://localhost:8080/getGameByID/0
+
+#GET getAllGames
+GET http://localhost:8080/getAllGames
