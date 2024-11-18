@@ -17,11 +17,24 @@ public class GamesFunctions {
 
     public Games getGameById(int gameID){
         //Games game = gameList.stream().filter(g -> g.getGameID() == gameID).findFirst().orElse(null);  
-        for(int i = 0; i < gameList.size(); i++)
-            if( gameList.get(i).equals(gameID) )
+        for(int i = 0; i < gameList.size(); i++){
+            if( gameList.get(i).equals(gameID) ){
+                System.out.println(gameID);
                 return gameList.get(i);
-
+            }
+        }
         return null;
+    }
+
+    public boolean addGame(Games newGames){
+        try {
+            newGames.setGameID(gameList.size());
+            gameList.add(newGames);
+            return true;
+        } catch (Exception e) {
+            // TODO: handle exception
+            return false;
+        }
     }
 
 

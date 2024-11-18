@@ -1,5 +1,27 @@
-#GET getGamesByID
-GET http://localhost:8080/getGameByID/0
+### Variables 
+@apiurl = http://localhost:8080
 
-#GET getAllGames
-GET http://localhost:8080/getAllGames
+### GET getGamesByID
+GET {{apiurl}}/getGameByID/1
+
+
+### GET getAllGames
+GET {{apiurl}}/getAllGames
+
+
+### POST newGame
+POST {{apiurl}}/addGame
+Content-Type: application/json
+Authorization: Bearer ACCESS-TOKEN
+
+{
+    "gameID": 0,
+    "game_name": "Team Fortress 2",
+    "game_description": "Nove classes distintas providenciam uma enorme variação de habilidades táticas e personalidades. Constantemente atualizado com novos modos de jogo, mapas, equipamentos e o mais importante: chapéus!",
+    "game_studio": "Valve",
+    "game_release_date": "2007-10-10"
+  }
+
+
+### POST injetora
+POST {{apiurl}}/injetoraTeste
